@@ -168,8 +168,8 @@ class Window:
 		r_quest = Toplevel()
 		r_quest.title("try pin")
 		r_quest.geometry('395x110+500+250')
-		self.e = Wgt.WgtEntry.create(r_quest,"PIN CODE", 0,0)
-		Wgt.WgtButton.create(r_quest,'APPLY PASSWORD',50,60,300,40, com = self.command_apply_try_pin)
+		self.e = Wgt.WgtEntry().create(r_quest,"PIN CODE", 0,0)
+		Wgt.WgtButton().create(r_quest,'APPLY PASSWORD',50,60,300,40, com = self.command_apply_try_pin)
 	def command_apply_try_pin(self):
 		pin_user = self.e.get()
 		new_file = open('try_pin.txt', 'w')
